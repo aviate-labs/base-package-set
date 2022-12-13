@@ -1,0 +1,19 @@
+# Base Package Set
+
+![latest version](https://img.shields.io/badge/{{ .Latest.Name }}-blue)
+
+## How to use with `vessel`?
+
+```dhall
+-- vessel.dhall
+{
+  dependencies = [ "{{ .Latest.PackageName }}" ],
+  compiler = Some "{{ .Latest.MocVersion }}"
+}
+```
+
+```dhall
+-- package-set.dhall
+let base = https://github.com/internet-computer/base-package-set/releases/download/{{ .Latest.Name }}/package-set.dhall sha256:{{ .Hash }}
+in  base
+```

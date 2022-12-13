@@ -1,0 +1,14 @@
+on:
+  push:
+    paths:
+      - 'package-set.dhall'
+jobs:
+  package-set:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: aviate-labs/setup-dfx@v0.2.3
+        with:
+          dfx-version: 0.12.1
+          vessel-version: 0.6.4
+      - run: vessel verify --version 0.7.4

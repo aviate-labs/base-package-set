@@ -1,0 +1,15 @@
+-- DO NOT EDIT. This file is auto-generated.
+let Package = { name : Text, version : Text, repo : Text, dependencies : List Text }
+
+let packages = [
+{{- range $i, $tag := .Tags }}
+    {{- if ne $i 0 }},{{ end }}
+    { name = "{{ $tag.PackageName }}"
+    , repo = "https://github.com/dfinity/motoko-base"
+    , version = "{{ $tag.Commit.Sha }}"
+    , dependencies = [] : List Text
+    }
+{{- end }}
+] : List Package
+
+in  packages
