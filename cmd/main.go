@@ -13,12 +13,10 @@ import (
 )
 
 const (
-	BASE_URL       = "https://api.github.com/repos/dfinity/motoko-base"
-	DFX_URL        = "https://api.github.com/repos/dfinity/sdk"
-	VESSEL_URL     = "https://api.github.com/repos/dfinity/vessel"
-	DFX_VERSION    = "0.12.1"
-	VESSEL_VERSION = "0.6.3"
-	MOC_PREFIX     = "moc-"
+	BASE_URL   = "https://api.github.com/repos/dfinity/motoko-base"
+	DFX_URL    = "https://api.github.com/repos/dfinity/sdk"
+	VESSEL_URL = "https://api.github.com/repos/dfinity/vessel"
+	MOC_PREFIX = "moc-"
 )
 
 type Tag struct {
@@ -120,15 +118,15 @@ func main() {
 	}
 
 	vesselCmd := exec.Command("vessel", "verify", "--version", latest.MocVersion())
-	if _, err := vesselCmd.Output(); err != nil {
-		log.Fatal(err)
+	if msg, err := vesselCmd.CombinedOutput(); err != nil {
+		log.Fatalf("vessel: %s %s %s", vesselCmd, msg, err)
 	}
 
 	{
 		dhallCmd := exec.Command("dhall", "hash", "--file", "package-set.dhall")
 		rawHash, err := dhallCmd.Output()
 		if err != nil {
-			log.Fatal(err)
+			log.Fatalf("dhall: %s %s", dhallCmd, err)
 		}
 
 		fileName := "README.md"
@@ -169,8 +167,8 @@ func main() {
 		}
 
 		vesselCmd := exec.Command("vessel", "verify", "--version", latest.MocVersion())
-		if _, err := vesselCmd.Output(); err != nil {
-			log.Fatal(err)
+		if msg, err := vesselCmd.CombinedOutput(); err != nil {
+			log.Fatalf("vessel: %s %s %s", vesselCmd, msg, err)
 		}
 	}
 }

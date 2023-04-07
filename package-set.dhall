@@ -2,6 +2,51 @@
 let Package = { name : Text, version : Text, repo : Text, dependencies : List Text }
 
 let packages = [
+    { name = "base-0.8.6"
+    , repo = "https://github.com/dfinity/motoko-base"
+    , version = "f8112331eb94dcea41741e59c7e2eaf367721866"
+    , dependencies = [] : List Text
+    },
+    { name = "base-0.8.5"
+    , repo = "https://github.com/dfinity/motoko-base"
+    , version = "80831499665a39e7b484057882a3635adf8b4e06"
+    , dependencies = [] : List Text
+    },
+    { name = "base-0.8.4"
+    , repo = "https://github.com/dfinity/motoko-base"
+    , version = "98c5717b283a8ec233907c3a3e92c79e3bbab1b3"
+    , dependencies = [] : List Text
+    },
+    { name = "base-0.8.3"
+    , repo = "https://github.com/dfinity/motoko-base"
+    , version = "ec6bf4372710237090b925a1b9c2b2df54b0601e"
+    , dependencies = [] : List Text
+    },
+    { name = "base-0.8.2"
+    , repo = "https://github.com/dfinity/motoko-base"
+    , version = "0c5029bfcc6f8d416aebad6fcd0c1c3bc492b802"
+    , dependencies = [] : List Text
+    },
+    { name = "base-0.8.1"
+    , repo = "https://github.com/dfinity/motoko-base"
+    , version = "6557fbefc9a03afff8e0c84591ea78190eb6f723"
+    , dependencies = [] : List Text
+    },
+    { name = "base-0.8.0"
+    , repo = "https://github.com/dfinity/motoko-base"
+    , version = "d192eab7b5d09ecb5d7ff20df83dddd17b293ef9"
+    , dependencies = [] : List Text
+    },
+    { name = "base-0.7.6"
+    , repo = "https://github.com/dfinity/motoko-base"
+    , version = "c85ecb676733518d0ec43339fe23f947c2ed1a66"
+    , dependencies = [] : List Text
+    },
+    { name = "base-0.7.5"
+    , repo = "https://github.com/dfinity/motoko-base"
+    , version = "ea3b699936e690b5c62859ece1fc3edfa71a536d"
+    , dependencies = [] : List Text
+    },
     { name = "base-0.7.4"
     , repo = "https://github.com/dfinity/motoko-base"
     , version = "d2f20b7a169cfabcf75c6672e24f016a6ed89f86"
@@ -105,51 +150,6 @@ let packages = [
     { name = "base-dfx-0.7.3"
     , repo = "https://github.com/dfinity/motoko-base"
     , version = "712e857cb1a0d2149da8027fe746cfb8e346cc58"
-    , dependencies = [] : List Text
-    },
-    { name = "base-dfx-0.7.2"
-    , repo = "https://github.com/dfinity/motoko-base"
-    , version = "712e857cb1a0d2149da8027fe746cfb8e346cc58"
-    , dependencies = [] : List Text
-    },
-    { name = "base-dfx-0.7.1"
-    , repo = "https://github.com/dfinity/motoko-base"
-    , version = "712e857cb1a0d2149da8027fe746cfb8e346cc58"
-    , dependencies = [] : List Text
-    },
-    { name = "base-dfx-0.7.0"
-    , repo = "https://github.com/dfinity/motoko-base"
-    , version = "712e857cb1a0d2149da8027fe746cfb8e346cc58"
-    , dependencies = [] : List Text
-    },
-    { name = "base-dfx-0.7.0-beta.8"
-    , repo = "https://github.com/dfinity/motoko-base"
-    , version = "712e857cb1a0d2149da8027fe746cfb8e346cc58"
-    , dependencies = [] : List Text
-    },
-    { name = "base-dfx-0.7.0-beta.7"
-    , repo = "https://github.com/dfinity/motoko-base"
-    , version = "712e857cb1a0d2149da8027fe746cfb8e346cc58"
-    , dependencies = [] : List Text
-    },
-    { name = "base-dfx-0.7.0-beta.6"
-    , repo = "https://github.com/dfinity/motoko-base"
-    , version = "712e857cb1a0d2149da8027fe746cfb8e346cc58"
-    , dependencies = [] : List Text
-    },
-    { name = "base-dfx-0.7.0-beta.5"
-    , repo = "https://github.com/dfinity/motoko-base"
-    , version = "712e857cb1a0d2149da8027fe746cfb8e346cc58"
-    , dependencies = [] : List Text
-    },
-    { name = "base-dfx-0.7.0-beta.4"
-    , repo = "https://github.com/dfinity/motoko-base"
-    , version = "deb4ab5528ce0e67f992f005e3c05b677687cd1a"
-    , dependencies = [] : List Text
-    },
-    { name = "base-dfx-0.7.0-beta.3"
-    , repo = "https://github.com/dfinity/motoko-base"
-    , version = "deb4ab5528ce0e67f992f005e3c05b677687cd1a"
     , dependencies = [] : List Text
     }
 ] : List Package

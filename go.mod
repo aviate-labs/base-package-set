@@ -1,3 +1,3 @@
 module github.com/internet-computer/base-package-set
 
-go 1.19
+go 1.20
